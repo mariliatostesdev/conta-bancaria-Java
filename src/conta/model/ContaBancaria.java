@@ -9,13 +9,12 @@ public class ContaBancaria {
 	private float saldo;
 
 	public ContaBancaria(int numero, int agencia, int tipo, String titular, float saldo) {
-			super();
-			this.numero = numero;
-			this.agencia = agencia;
-			this.tipo = tipo;
-			this.titular = titular;
-			this.saldo = saldo;
-		}
+		this.numero = numero;
+		this.agencia = agencia;
+		this.tipo = tipo;
+		this.titular = titular;
+		this.saldo = saldo;
+	}
 
 	public int getNumero() {
 		return numero;
@@ -55,6 +54,47 @@ public class ContaBancaria {
 
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
+	}
+
+	public boolean sacar(float valor) {
+
+		if (this.getSaldo() < valor) {
+			System.out.println("\nSaldo insuficiente!");
+			return false;
+		}
+
+		this.setSaldo(this.getSaldo() - valor);
+		return true;
+	}
+
+	public void depositar(float valor) {
+		this.setSaldo(this.getSaldo() + valor);
+	}
+
+	public void visualizar() {
+
+		String tipo = "";
+
+		switch (this.tipo) {
+		case 1:
+			tipo = "Conta Corrente";
+			break;
+		case 2:
+			tipo = "Conta Poupança";
+			break;
+		}
+
+		System.out.println("\n\n***********************************************************");
+		System.out.println("Dados da Conta:");
+		System.out.println("***********************************************************");
+		System.out.println("Número da conta: " + this.numero);
+		System.out.println("Agência: " + this.agencia);
+		System.out.println("Tipo da Conta: " + this.tipo);
+		System.out.println("Titular: " + this.titular);
+		System.out.println("Saldo: " + this.saldo);
+		System.out.println("\n\n***********************************************************\n\n");
+
+
 	}
 
 }
