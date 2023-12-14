@@ -59,32 +59,6 @@ public class Menu {
 			switch (opcao) {
 			case 1:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar conta\n\n");
-				ContaBancaria novaConta = new ContaBancaria(32157, 7697, 0, null, 0);
-				System.out.println("\nPreencha os dados a seguir para criar sua conta:");
-				System.out.println("\nDeseja criar uma conta (1)-Corrente  ou (2)-Poupança?");
-				novaConta.setTipo(input.nextInt());
-
-				input.nextLine();
-				System.out.println("\nQual o nome do titular da conta?");
-				novaConta.setTitular(input.nextLine());
-				System.out.println("\nQual valor deseja depositar como seu saldo inicial?");
-				novaConta.setSaldo(input.nextFloat());
-				System.out.println("\n\n\tConta criada com sucesso! Os dados da sua conta são:");
-				System.out.println("\n\tNúmero da conta: " + novaConta.getNumero());
-				System.out.println("\n\tNúmero da agência: " + novaConta.getAgencia());
-
-				if (novaConta.getTipo() == 1) {
-					tipoNovaConta = "Conta Corrente";
-				} else {
-					tipoNovaConta = "Conta Poupança";
-				}
-
-				System.out.println("\n\tTipo de conta: " + tipoNovaConta);
-				System.out.println("\n\tNome do titular da conta: " + novaConta.getTitular());
-				System.out.println("\n\tSaldo da conta: R$" + novaConta.getSaldo());
-				System.out.println("                                               ");
-				System.out.println("***********************************************");
-
 				break;
 			case 2:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todas as Contas\n\n");
