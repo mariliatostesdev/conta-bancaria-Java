@@ -33,23 +33,4 @@ public class ContaCorrente extends ContaBancaria {
 		super.visualizar();		// Só consigo obter os resultados, não tenho acesso direto!
 		System.out.println("\nLimite de Crédito: " + this.limite);
 	}
-	
-
-//
-//	public void depositar(float valor) {
-//		this.setSaldo(this.getSaldo() + valor);
-//	}
-//
-//	public void visualizar() {
-//
-//		String tipo = "";
-//
-//		switch (this.tipo) {
-//		case 1:
-//			tipo = "Conta Corrente";
-//			break;
-//		case 2:
-//			tipo = "Conta Poupança";
-//			break;
-//		}
 }
