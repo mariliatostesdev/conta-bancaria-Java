@@ -92,8 +92,6 @@ public abstract class ContaBancaria {
 		System.out.println("Tipo da Conta: " + this.tipo);
 		System.out.println("Titular: " + this.titular);
 		System.out.println("Saldo: " + this.saldo);
-		System.out.println("\n\n***********************************************************\n\n");
-
 
 	}
 

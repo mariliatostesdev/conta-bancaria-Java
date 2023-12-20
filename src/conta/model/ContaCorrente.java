@@ -18,9 +18,15 @@ public class ContaCorrente extends ContaBancaria {
 	}
 	
 	@Override
+	public void visualizar() {
+		super.visualizar();		// Só consigo obter os resultados, não tenho acesso direto!
+		System.out.println("Limite de Crédito: " + this.limite);
+	}
+
+	@Override
 	public boolean sacar(float valor) {
 		if (this.getSaldo() + this.getLimite() < valor) {
-			System.out.println("\nSaldo insuficiente.");
+			System.out.println("Saldo insuficiente.");
 			return false;
 		}
 		
@@ -28,9 +34,4 @@ public class ContaCorrente extends ContaBancaria {
 		return true;
 	}
 	
-	@Override
-	public void visualizar() {
-		super.visualizar();		// Só consigo obter os resultados, não tenho acesso direto!
-		System.out.println("\nLimite de Crédito: " + this.limite);
-	}
 }
